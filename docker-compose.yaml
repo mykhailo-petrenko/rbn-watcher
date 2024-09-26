@@ -1,0 +1,6 @@
+services:
+  broker:
+    image: rabbitmq:4.0.2-management
+    restart: on-failure
+    ports:
+      - "5672:5672"
