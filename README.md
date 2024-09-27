@@ -1,12 +1,16 @@
-# RBN Spoter in microservices
+# RBN Watcher
 
-Lets use Redis pub/sub as message brocker to connect RBN with subscribers.
+## Scope 
+- As a radio amateur I want to be notified when another radio amateur with desired callsign appears on air.
 
-RBN consumer, who sent all spots to Redis written on golang.
-
-Telegram bot will be on node in sake of simplicilty.
+## Architecture
 
 ![Architecture](docs/FindHamMate.drawio.png)
+
+- Let's use RabbitMQ pub/sub as message broker to connect RBN with subscribers.
+- RBN consumer, who sent all spots to broker written on python.
+- Telegram bot will be on python in sake of simplicity.
+- Subscriptions state could be stored in mysql-lite
 
 ## Start 
 
